@@ -1,4 +1,5 @@
 # boilerplate
+
 boilerplate for using aiteung package. Please init your apps, and replace package import with the name iteung/... in the main.go, controller.go dan url.go
 
 ```sh
@@ -7,7 +8,9 @@ go mod tidy
 ```
 
 ## main
+
 main.go file
+
 ```go
 package main
 
@@ -35,6 +38,7 @@ func main() {
 ```
 
 ## url
+
 url.go file inside url folder, act as package
 
 ```go
@@ -55,6 +59,7 @@ func Web(page *fiber.App) {
 ```
 
 ## controller
+
 controller.go inside controller folder act as package
 
 ```go
@@ -89,7 +94,6 @@ func PostWhatsAuthRequest(c *fiber.Ctx) error {
 }
 
 ```
-
 
 ## Config Folder Package
 
