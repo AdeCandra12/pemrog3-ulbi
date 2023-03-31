@@ -35,7 +35,7 @@ func GetPresensiID(c *fiber.Ctx) error {
 	if id == "" {
 		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
 			"status":  http.StatusInternalServerError,
-			"message": "Wrong parameter",
+			"message": "Wrong parameter!",
 		})
 	}
 	objID, err := primitive.ObjectIDFromHex(id)
