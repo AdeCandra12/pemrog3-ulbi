@@ -8,11 +8,10 @@ import (
 	"github.com/AdeCandra12/pemrog3-ulbi/config"
 	"github.com/aiteung/musik"
 	cek "github.com/aiteung/presensi"
+	"github.com/gofiber/fiber/v2"
 	inimodullatihan "github.com/indrariksa/be_presensi/module"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
-
-	"github.com/gofiber/fiber/v2"
 )
 
 func Homepage(c *fiber.Ctx) error {
