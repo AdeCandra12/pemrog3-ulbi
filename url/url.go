@@ -12,7 +12,7 @@ func Web(page *fiber.App) {
 	page.Get("/ws/whatsauth/qr", websocket.New(controller.WsWhatsAuthQR)) //websocket whatsauth
 
 	// page.Get("/", controller.Homepage) //ujicoba panggil package musik
-	page.Get("/presensi", controller.GetPresensi)
+	// page.Get("/presensi", controller.GetPresensi)
 
 	page.Get("/presensi", controller.GetAllPresensi)    //menampilkan seluruh data presensi
 	page.Get("/presensi/:id", controller.GetPresensiID) //menampilkan data presensi berdasarkan id
