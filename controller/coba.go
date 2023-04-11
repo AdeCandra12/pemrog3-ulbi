@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/AdeCandra12/pemrog3-ulbi/config"
+	inimodul "github.com/AdeCandra12/surat/module"
 	"github.com/aiteung/musik"
 	cek "github.com/aiteung/presensi"
 	"github.com/gofiber/fiber/v2"
@@ -57,5 +58,10 @@ func GetPresensiID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
+	return c.JSON(ps)
+}
+
+func GetAllSurat(c *fiber.Ctx) error {
+	ps := inimodul.GetAllSurat(config.Ulbimongoconn, "presensi")
 	return c.JSON(ps)
 }
