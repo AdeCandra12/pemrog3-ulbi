@@ -65,3 +65,7 @@ func GetAllSurat(c *fiber.Ctx) error {
 	ps := inimodul.GetAllSurat(config.Ulbimongoconn, "surat")
 	return c.JSON(ps)
 }
+func GetAllDisposisi(c *fiber.Ctx) error {
+	ps := inimodul.GetAllDisposisi(config.Ulbimongoconn, "disposisi")
+	return c.JSON(ps)
+}
