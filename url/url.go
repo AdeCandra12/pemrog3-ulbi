@@ -14,10 +14,12 @@ func Web(page *fiber.App) {
 	page.Get("/", controller.Homepage) //ujicoba panggil package musik
 	// page.Get("/presensi", controller.GetPresensi)
 
-	page.Get("/presensi", controller.GetAllPresensi)    //menampilkan seluruh data presensi
-	page.Get("/presensi/:id", controller.GetPresensiID) //menampilkan data presensi berdasarkan id
-	page.Get("/surat", controller.GetAllSurat)          //menampilkan seluruh data presensi
-	page.Get("/disposisi", controller.GetAllDisposisi)  //menampilkan seluruh data presensi
-	page.Post("/ins", controller.InsertData)            // insert data
+	page.Get("/presensi", controller.GetAllPresensi)          //menampilkan seluruh data presensi
+	page.Get("/presensi/:id", controller.GetPresensiID)       //menampilkan data presensi berdasarkan id
+	page.Get("/surat", controller.GetAllSurat)                //menampilkan seluruh data presensi
+	page.Get("/disposisi", controller.GetAllDisposisi)        //menampilkan seluruh data presensi
+	page.Post("/ins", controller.InsertData)                  // insert data
+	page.Put("/upd/:id", controller.UpdateData)               // update data
+	page.Delete("/delete/:id", controller.DeletePresensiByID) // delete data
 
 }
