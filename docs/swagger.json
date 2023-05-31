@@ -1,0 +1,18 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample swagger for Fiber",
+        "title": "TES SWAG",
+        "contact": {
+            "name": "API Support",
+            "email": "adecandra1500@gmail.com"
+        },
+        "license": {
+            "url": "http://github.com/AdeCandra12"
+        },
+        "version": "1.0"
+    },
+    "host": "pemrog3-ulbi.herokuapp.com",
+    "basePath": "/",
+    "paths": {}
+}

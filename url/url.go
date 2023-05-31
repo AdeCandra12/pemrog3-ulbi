@@ -4,6 +4,7 @@ import (
 	"github.com/AdeCandra12/pemrog3-ulbi/controller"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/swagger"
 	"github.com/gofiber/websocket/v2"
 )
 
@@ -21,5 +22,5 @@ func Web(page *fiber.App) {
 	page.Post("/ins", controller.InsertData)                  // insert data
 	page.Put("/upd/:id", controller.UpdateData)               // update data
 	page.Delete("/delete/:id", controller.DeletePresensiByID) // delete data
-
+	page.Get("/docs/*", swagger.HandlerDefault)
 }

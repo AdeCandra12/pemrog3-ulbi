@@ -1,0 +1,13 @@
+basePath: /
+host: pemrog3-ulbi.herokuapp.com
+info:
+  contact:
+    email: adecandra1500@gmail.com
+    name: API Support
+  description: This is a sample swagger for Fiber
+  license:
+    url: http://github.com/AdeCandra12
+  title: TES SWAG
+  version: "1.0"
+paths: {}
+swagger: "2.0"
