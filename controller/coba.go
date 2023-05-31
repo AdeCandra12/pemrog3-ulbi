@@ -16,15 +16,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-// GetAllPresensi godoc
-// @Summary Get All Data Presensi.
-// @Description Mengambil semua data presensi.
-// @Tags Presensi
-// @Accept json
-// @Produce json
-// @Success 200 {object} Presensi
-// @Router /presensi [get]
-
 func Homepage(c *fiber.Ctx) error {
 	ipaddr := musik.GetIPaddress()
 	return c.JSON(ipaddr)
@@ -35,6 +26,14 @@ func GetPresensi(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
+// GetAllPresensi godoc
+// @Summary Get All Data Presensi.
+// @Description Mengambil semua data presensi.
+// @Tags Presensi
+// @Accept json
+// @Produce json
+// @Success 200 {object} Presensi
+// @Router /presensi [get]
 func GetAllPresensi(c *fiber.Ctx) error {
 	ps := inimodullatihan.GetAllPresensi(config.Ulbimongoconn, "presensi")
 	return c.JSON(ps)
