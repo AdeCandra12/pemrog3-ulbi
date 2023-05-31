@@ -35,8 +35,6 @@ definitions:
     type: object
   controller.Karyawan:
     properties:
-      _id:
-        type: string
       hari_kerja:
         example:
         - Senin
@@ -65,8 +63,6 @@ definitions:
     type: object
   controller.Presensi:
     properties:
-      _id:
-        type: string
       biodata:
         $ref: '#/definitions/controller.Karyawan'
       checkin:

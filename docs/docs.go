@@ -175,9 +175,6 @@ const docTemplate = `{
         "controller.Karyawan": {
             "type": "object",
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "hari_kerja": {
                     "type": "array",
                     "items": {
@@ -216,9 +213,6 @@ const docTemplate = `{
         "controller.Presensi": {
             "type": "object",
             "properties": {
-                "_id": {
-                    "type": "string"
-                },
                 "biodata": {
                     "$ref": "#/definitions/controller.Karyawan"
                 },
