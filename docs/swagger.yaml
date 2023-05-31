@@ -36,7 +36,6 @@ definitions:
   controller.Karyawan:
     properties:
       _id:
-        example: "123456789"
         type: string
       hari_kerja:
         example:
@@ -67,7 +66,6 @@ definitions:
   controller.Presensi:
     properties:
       _id:
-        example: "123456789"
         type: string
       biodata:
         $ref: '#/definitions/controller.Karyawan'

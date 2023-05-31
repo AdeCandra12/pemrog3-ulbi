@@ -47,7 +47,7 @@ type Penerima struct {
 	Tgl_terima    string             `bson:"tgl_terima,omitempty" json:"tgl_terima,omitempty"`
 }
 type Karyawan struct {
-	ID          primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example:"123456789"`
+	ID          primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
 	Nama        string             `bson:"nama,omitempty" json:"nama,omitempty" example:"Tes Swagger"`
 	PhoneNumber string             `bson:"phone_number,omitempty" json:"phone_number,omitempty" example:"08123456789"`
 	Jabatan     string             `bson:"jabatan,omitempty" json:"jabatan,omitempty" example:"Anonymous"`
@@ -66,7 +66,7 @@ type JamKerja struct {
 }
 
 type Presensi struct {
-	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty" example:"123456789"`
+	ID           primitive.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
 	Longitude    float64            `bson:"longitude,omitempty" json:"longitude,omitempty" example:"123.11"`
 	Latitude     float64            `bson:"latitude,omitempty" json:"latitude,omitempty" example:"123.11"`
 	Location     string             `bson:"location,omitempty" json:"location,omitempty" example:"Bandung"`
