@@ -519,7 +519,7 @@ func GetNilaiFromID(c *fiber.Ctx) error {
 	return c.JSON(na)
 }
 
-// Insert Function Monitoring
+// Insert Data Monitoring
 
 // InsertMahasiswa godoc
 // @Summary Insert data mahasiswa.
