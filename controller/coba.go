@@ -246,8 +246,8 @@ func DeletePresensiByID(c *fiber.Ctx) error {
 // @Success 200 {object} Mahasiswa
 // @Router /all-mahasiswa [get]
 func GetAllMahasiswa(c *fiber.Ctx) error {
-	ps := inimodulproyek1.GetAllMahasiswa(config.Ulbimongoconn, "mahasiswa")
-	return c.JSON(ps)
+	ms := inimodulproyek1.GetAllMahasiswa(config.Ulbimongoconn, "mahasiswa")
+	return c.JSON(ms)
 }
 
 // GetAllOrangTua godoc
@@ -259,8 +259,8 @@ func GetAllMahasiswa(c *fiber.Ctx) error {
 // @Success 200 {object} OrangTua
 // @Router /all-orangtua [get]
 func GetAllOrangTua(c *fiber.Ctx) error {
-	ps := inimodulproyek1.GetAllOrangTua(config.Ulbimongoconn, "orangtua")
-	return c.JSON(ps)
+	ot := inimodulproyek1.GetAllOrangTua(config.Ulbimongoconn, "orangtua")
+	return c.JSON(ot)
 }
 
 // GetAllMatakuliah godoc
@@ -272,8 +272,8 @@ func GetAllOrangTua(c *fiber.Ctx) error {
 // @Success 200 {object} Matakuliah
 // @Router /all-matakuliah [get]
 func GetAllMatakuliah(c *fiber.Ctx) error {
-	ps := inimodulproyek1.GetAllMatakuliah(config.Ulbimongoconn, "matakuliah")
-	return c.JSON(ps)
+	mk := inimodulproyek1.GetAllMatakuliah(config.Ulbimongoconn, "matakuliah")
+	return c.JSON(mk)
 }
 
 // GetAllAbsensi godoc
@@ -285,8 +285,8 @@ func GetAllMatakuliah(c *fiber.Ctx) error {
 // @Success 200 {object} Absensi
 // @Router /all-absensi [get]
 func GetAllAbsensi(c *fiber.Ctx) error {
-	ps := inimodulproyek1.GetAllAbsensi(config.Ulbimongoconn, "absensi")
-	return c.JSON(ps)
+	as := inimodulproyek1.GetAllAbsensi(config.Ulbimongoconn, "absensi")
+	return c.JSON(as)
 }
 
 // GetAllNilai godoc
@@ -298,8 +298,8 @@ func GetAllAbsensi(c *fiber.Ctx) error {
 // @Success 200 {object} Nilai
 // @Router /all-nilai [get]
 func GetAllNilai(c *fiber.Ctx) error {
-	ps := inimodulproyek1.GetAllNilai(config.Ulbimongoconn, "nilai")
-	return c.JSON(ps)
+	na := inimodulproyek1.GetAllNilai(config.Ulbimongoconn, "nilai")
+	return c.JSON(na)
 }
 
 // Get From ID Monitoring
@@ -331,7 +331,7 @@ func GetMahasiswaFromID(c *fiber.Ctx) error {
 			"message": "Invalid id parameter",
 		})
 	}
-	ps, err := inimodulproyek1.GetMahasiswaFromID(objID, config.Ulbimongoconn, "mahasiswa")
+	ms, err := inimodulproyek1.GetMahasiswaFromID(objID, config.Ulbimongoconn, "mahasiswa")
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return c.Status(http.StatusNotFound).JSON(fiber.Map{
@@ -344,7 +344,7 @@ func GetMahasiswaFromID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
-	return c.JSON(ps)
+	return c.JSON(ms)
 }
 
 // GetOrangTuaFromID godoc
@@ -374,7 +374,7 @@ func GetOrangTuaFromID(c *fiber.Ctx) error {
 			"message": "Invalid id parameter",
 		})
 	}
-	ps, err := inimodulproyek1.GetOrangTuaFromID(objID, config.Ulbimongoconn, "orangtua")
+	ot, err := inimodulproyek1.GetOrangTuaFromID(objID, config.Ulbimongoconn, "orangtua")
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return c.Status(http.StatusNotFound).JSON(fiber.Map{
@@ -387,7 +387,7 @@ func GetOrangTuaFromID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
-	return c.JSON(ps)
+	return c.JSON(ot)
 }
 
 // GetMatakuliahFromID godoc
@@ -417,7 +417,7 @@ func GetMatakuliahFromID(c *fiber.Ctx) error {
 			"message": "Invalid id parameter",
 		})
 	}
-	ps, err := inimodulproyek1.GetMatakuliahFromID(objID, config.Ulbimongoconn, "matakuliah")
+	mk, err := inimodulproyek1.GetMatakuliahFromID(objID, config.Ulbimongoconn, "matakuliah")
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return c.Status(http.StatusNotFound).JSON(fiber.Map{
@@ -430,7 +430,7 @@ func GetMatakuliahFromID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
-	return c.JSON(ps)
+	return c.JSON(mk)
 }
 
 // GetAbsensiFromID godoc
@@ -460,7 +460,7 @@ func GetAbsensiFromID(c *fiber.Ctx) error {
 			"message": "Invalid id parameter",
 		})
 	}
-	ps, err := inimodulproyek1.GetAbsensiFromID(objID, config.Ulbimongoconn, "absensi")
+	as, err := inimodulproyek1.GetAbsensiFromID(objID, config.Ulbimongoconn, "absensi")
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return c.Status(http.StatusNotFound).JSON(fiber.Map{
@@ -473,7 +473,7 @@ func GetAbsensiFromID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
-	return c.JSON(ps)
+	return c.JSON(as)
 }
 
 // GetNilaiFromID godoc
@@ -503,7 +503,7 @@ func GetNilaiFromID(c *fiber.Ctx) error {
 			"message": "Invalid id parameter",
 		})
 	}
-	ps, err := inimodulproyek1.GetNilaiFromID(objID, config.Ulbimongoconn, "nilai")
+	na, err := inimodulproyek1.GetNilaiFromID(objID, config.Ulbimongoconn, "nilai")
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return c.Status(http.StatusNotFound).JSON(fiber.Map{
@@ -516,7 +516,7 @@ func GetNilaiFromID(c *fiber.Ctx) error {
 			"message": fmt.Sprintf("Error retrieving data for id %s", id),
 		})
 	}
-	return c.JSON(ps)
+	return c.JSON(na)
 }
 
 // Insert Function Monitoring
