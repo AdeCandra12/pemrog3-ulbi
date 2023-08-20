@@ -85,11 +85,11 @@ func GetPresensiID(c *fiber.Ctx) error {
 }
 
 func GetAllSurat(c *fiber.Ctx) error {
-	ps := inimodul.GetAllSurat(config.Ulbimongoconn, "surat")
+	ps := inimodul.GetAllSurat(config.Ulbimongoconn2, "surat")
 	return c.JSON(ps)
 }
 func GetAllDisposisi(c *fiber.Ctx) error {
-	ps := inimodul.GetAllDisposisi(config.Ulbimongoconn, "disposisi")
+	ps := inimodul.GetAllDisposisi(config.Ulbimongoconn2, "disposisi")
 	return c.JSON(ps)
 }
 
