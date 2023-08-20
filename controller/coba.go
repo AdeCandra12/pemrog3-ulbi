@@ -695,7 +695,8 @@ func InsertNilai(c *fiber.Ctx) error {
 		nilai.NPM_ms,
 		nilai.Presensi,
 		nilai.Nilai_akhir,
-		nilai.Grade)
+		nilai.Grade,
+		nilai.Tahun_ajaran)
 	if err != nil {
 		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
 			"status":  http.StatusInternalServerError,
@@ -975,7 +976,8 @@ func UpdateNilai(c *fiber.Ctx) error {
 		nilai.NPM_ms,
 		nilai.Presensi,
 		nilai.Nilai_akhir,
-		nilai.Grade)
+		nilai.Grade,
+		nilai.Tahun_ajaran)
 	if err != nil {
 		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
 			"status":  http.StatusInternalServerError,
