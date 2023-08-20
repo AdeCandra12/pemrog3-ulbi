@@ -19,6 +19,7 @@ var origins = []string{
 	"https://127.0.0.1.5500",
 	"https://127.0.0.1.5501",
 	"https://127.0.0.1.8080",
+	"http://127.0.0.1.5500",
 	"https://adecandra12.github.io",
 }
 
