@@ -3,7 +3,7 @@ module github.com/AdeCandra12/pemrog3-ulbi
 go 1.20
 
 require (
-	github.com/AdeCandra12/BE_proyek1 v0.0.6
+	github.com/AdeCandra12/BE_proyek1 v0.0.8
 	github.com/AdeCandra12/surat v0.0.3
 	github.com/aiteung/atdb v0.0.13
 	github.com/aiteung/musik v0.0.5
